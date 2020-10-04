@@ -87,9 +87,39 @@ img {
 
 .address-list {
   display: flex;
+  align-items: center;
 }
+
 .address-list-item + .address-list-item {
   margin-left: 50px;
+}
+.address-list-item:hover,
+.address-list-item:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
+.header-address-link {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: #757575;
+  text-decoration: none;
+  align-items: center;
+}
+
+.header-tel-link {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: #757575;
+  text-decoration: none;
+  align-items: center;
 }
 
 .address .navigation-list {
@@ -99,6 +129,27 @@ img {
   letter-spacing: 0.02em;
 
   color: var(--subtitle-color);
+}
+.mail-icon {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: #757575;
+}
+.mail-icon:hover,
+.mail-icon:focus {
+  fill: var(--accent-color);
+}
+
+.tel-icon {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: #757575;
+}
+.tel-icon:hover {
+  fill: var(--accent-color);
+  color: var(--accent-color);
 }
 
 /*==============main===============*/
@@ -264,6 +315,9 @@ main {
 }
 /*==========OUR TEAM==========*/
 
+.team {
+  background: #f5f4fa;
+}
 .team-title {
   font-weight: bold;
   font-size: 36px;
@@ -308,6 +362,37 @@ main {
 .team-list-img {
   margin-bottom: 30px;
 }
+/*===============ICON-SVG========*/
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  width: 206px;
+  margin-right: 32px;
+  margin-left: 32px;
+  margin-bottom: 30px;
+}
+
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.social-list-link:hover {
+  background-color: var(--accent-color);
+}
+
+.social-list-link:hover .social-list-svg {
+  fill: #ffffff;
+}
+
+.social-list-svg {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
 
 /*==========LOGO==========*/
 .logo {
@@ -330,6 +415,77 @@ main {
   letter-spacing: 0.03em;
   color: #ffffff;
   margin-bottom: 20px;
+}
+/*===========CUSTOMERS=========*/
+.customers {
+  width: 1600px;
+  height: 370px;
+}
+
+.customers-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+
+  color: var(--title-color);
+}
+.customers-list {
+  display: flex;
+}
+.customers-item {
+  width: 170px;
+  height: 90px;
+}
+.customers-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
+}
+.customers-link:hover {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.customers-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.customers-item:nth-of-type(1) .customers-svg {
+  width: 44px;
+  height: 49px;
+}
+.customers-item:nth-of-type(2) .customers-svg {
+  width: 40px;
+  height: 52px;
+}
+.customers-item:nth-of-type(3) .customers-svg {
+  width: 41px;
+  height: 42px;
+}
+.customers-item:nth-of-type(4) .customers-svg {
+  width: 79px;
+  height: 42px;
+}
+.customers-item:nth-of-type(5) .customers-svg {
+  width: 59px;
+  height: 47px;
+}
+.customers-item:nth-of-type(6) .customers-svg {
+  width: 88px;
+  height: 45px;
+}
+.customers-svg {
+  width: 170px;
+  height: 90px;
+  border-radius: 1px;
 }
 
 /*==========FOOTER==========*/
@@ -365,8 +521,59 @@ main {
 .footer-link {
   color: rgba(255, 255, 255, 0.6);
 }
+.footer .container {
+  display: flex;
+  align-items: center;
+}
+.footer-icon {
+  display: flex;
+}
+.footer-title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.footer-box {
+  margin-right: 70px;
+}
+.social-list-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 206px;
+
+  margin-top: 20px;
+}
+.social-list-link-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.social-list-link-footer:hover {
+  background-color: var(--accent-color);
+}
+.social-list-svg-footer {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+}
+
 /*==========BTNFILTERS==========*/
 .btn-filters {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  letter-spacing: 0.03em;
   padding: 6px 22px;
   color: var(--title-color);
   border-radius: 4px;
