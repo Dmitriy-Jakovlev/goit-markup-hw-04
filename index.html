@@ -26,7 +26,7 @@
 
           <ul class="navigation-list list">
             <li class="navigation-list-item">
-              <a class="navigation-list-link link" href="./index.html"
+              <a class="navigation-list-link link studio" href="./index.html"
                 >Студия</a
               >
             </li>
@@ -44,7 +44,7 @@
         <ul class="address-list list">
           <li class="address-list-item">
             <a href="mailto:info@devstudio.com" class="header-address-link link"
-              ><svg class="header-icon">
+              ><svg class="header-envelope-icon">
                 <use href="./images/sprite.svg#envelope"></use>
               </svg>
               info@devstudio.com</a
@@ -52,7 +52,7 @@
           </li>
           <li class="address-list-item">
             <a href="tel:+380961111111" class="header-address-link">
-              <svg class="header-icon">
+              <svg class="header-smartphone-icon">
                 <use href="./images/sprite.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -71,7 +71,9 @@
         <div class="container">
           <div class="pic">
             <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-            <button class="modal-btn" type="button">Заказать услугу</button>
+            <button class="modal-btn" type="button" data-modal-open>
+              Заказать услугу
+            </button>
           </div>
         </div>
       </section>
@@ -120,32 +122,36 @@
         <div class="container">
           <h2 class="activity-title">Чем мы занимаемся</h2>
           <ul class="activity-list list">
-            <li class="activity-list-link">
-              <img
+            <li class="activity-list-item">
+              <div class="activity-label">
+                <img
                 class="activity-list-img"
                 src="./images/What-are-we-doing/box-1.jpg"
                 alt="человек печатает на клавиатуре"
                 width="370"
-                height="294"
-              />
+                height="294" />
+                <p class="text-activity">Десктопные приложения</p>
+            </div>
             </li>
-            <li class="activity-list-link">
-              <img
-                class="activity-list-img"
-                src="./images/What-are-we-doing/box-2.jpg"
-                alt="человек выберает оформление для телефона"
-                width="370"
-                height="294"
-              />
+            <li class="activity-list-item">
+              <div class="activity-label">
+                <img class="activity-list-img" 
+                src="./images/What-are-we-doing/box-2.jpg" 
+                alt="человек печатает на клавиатуре"
+                width="370" 
+                height="294" />
+                <p class="text-activity">Мобильные приложения</p>
+                </div>
             </li>
-            <li class="activity-list-link">
-              <img
-                class="activity-list-img"
-                src="./images/What-are-we-doing/box-3.jpg"
-                alt="планшет с палитрой"
-                width="370"
-                height="294"
-              />
+            <li class="activity-list-item">
+              <div class="activity-label">
+                <img class="activity-list-img" 
+                src="./images/What-are-we-doing/box-3.jpg" 
+                alt="человек печатает на клавиатуре"
+                width="370" 
+                height="294" />
+                <p class="text-activity">Дизайнерские решения</p>          
+                </div>
             </li>
           </ul>
         </div>
@@ -329,6 +335,9 @@
           </ul>
         </div>
       </section>
+
+      <!--CUSTOMERS-->
+
       <section class="customers section">
         <div class="container">
           <h3 class="customers-title">Постоянные клиенты</h3>
@@ -450,5 +459,16 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-btn" data-modal-close>
+          <svg class="icon-close-btn">
+            <use href="./images/modal/vector.svg#vector"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
